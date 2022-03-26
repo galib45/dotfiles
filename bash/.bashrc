@@ -127,6 +127,6 @@ bind -x '"\C-g": fbgrab ss-$(date +%Y%m%d%H%M%S).png 2> tmp'
 trap 'echo -n "$(tput sgr0)"' DEBUG
 
 export PATH="$PATH:/usr/sbin"
-export ghtoken="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"
+. ~/ghtoken
 clear
 pfetch
