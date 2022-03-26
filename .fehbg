@@ -1,0 +1,3 @@
+#!/bin/sh
+#feh --no-fehbg --bg-scale '/home/galib/wallpapers/0008.jpg' 
+feh --no-fehbg --bg-scale --randomize ~/wallpapers/* 
