@@ -359,7 +359,12 @@
     </keybind>
     <keybind key="A-m">
        <action name="ToggleMaximize"/>
-    </keybind>    
+    </keybind>  
+    <keybind key="C-S-b">
+       <action name="Execute">
+         <command>~/.fehbg</command>
+       </action>
+    </keybind>  
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>

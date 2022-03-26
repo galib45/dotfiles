@@ -16,6 +16,6 @@
 #
 #xfce-mcs-manager &
 
-~/.fehbg &
+~/.fehbg
 tint2 &
 picom -c --corner-radius 5 &
