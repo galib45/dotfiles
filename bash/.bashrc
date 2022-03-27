@@ -127,6 +127,8 @@ bind -x '"\C-g": fbgrab ss-$(date +%Y%m%d%H%M%S).png 2> tmp'
 trap 'echo -n "$(tput sgr0)"' DEBUG
 
 export PATH="$PATH:/usr/sbin"
+export EDITOR="$(which micro)"
+export VISUAL=$EDITOR
 . ~/ghtoken
 clear
 pfetch
