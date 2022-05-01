@@ -1,4 +1,12 @@
 # Dotfiles Repository
-First clone this repository by 
+- clone the repository
 
-	$ git clone https://github.com/galib45/dotfiles
+	git clone https://github.com/galib45/dotfiles
+
+- cd into the directory
+
+	cd dotfiles
+
+- restore dotfiles
+
+	stow [foldername]
