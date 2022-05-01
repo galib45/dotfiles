@@ -354,6 +354,19 @@
     <keybind key="C-S-r">
        <action name="Reconfigure"/>
     </keybind>
+    <keybind key="C-S-c">
+    <action name="If">
+    <query><title>Guvcview  (*)</title></query>
+    <then>
+       <action name="MoveResizeTo">
+       <x>-0</x><y>0</y>
+       <width client="yes">200</width>
+       <height>150</height>
+       </action>
+       <action name="Undecorate"/>
+    </then>
+    </action>
+    </keybind>    
     <keybind key="C-d">
        <action name="ToggleDecorations"/>
     </keybind>
