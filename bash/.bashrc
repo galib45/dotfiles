@@ -127,11 +127,11 @@ bind -x '"\C-g": fbgrab ss-$(date +%Y%m%d%H%M%S).png 2> tmp'
 trap 'echo -n "$(tput sgr0)"' DEBUG
 
 # mounting /dev/sda5 if not mounted
-if [ -z $(lsblk | grep sda5 | awk -F 'part' '{print $2}') ]; then 
-	echo /dev/sda5 is not mounted ...
-	echo mounting /dev/sda5 ...
-	sudo mount /dev/sda5 ~/media/sda5
-fi
+# if [ -z $(lsblk | grep sda6 | awk -F 'part' '{print $2}') ]; then 
+#	echo /dev/sda6 is not mounted ...
+#	echo mounting /dev/sda6 ...
+#	sudo mount /dev/sda6 ~/media/sda6
+# fi
 
 export PATH="$PATH:/usr/sbin"
 export EDITOR="$(which micro)"
@@ -139,4 +139,4 @@ export VISUAL=$EDITOR
 . ~/ghtoken
 . "$HOME/.cargo/env"
 clear
-pfetch
+# pfetch

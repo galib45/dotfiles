@@ -7,7 +7,7 @@ xsetroot -cursor_name left_ptr
 picom -c --experimental-backends &
 sxhkd &
 
-bspc monitor -g 1024x574+0+26
+bspc monitor -g 1920x1040+0+40
 bspc monitor -d 1 2 3 4 5 6
 
 bspc config border_width         2

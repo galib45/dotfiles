@@ -4,11 +4,11 @@
 
 # terminal emulator
 super + Return
-	x-terminal-emulator
+	st
 
 # browser
 super + b
-	x-www-browser
+	brave-browser
 
 # zathura
 super + z
