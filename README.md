@@ -9,4 +9,6 @@ cd into the directory
 
 restore dotfiles
 
-	stow [foldername]
+	cp dot-bashrc ~/.bashrc
+	cp dot-fehbg ~/.fehbg
+	cp -r dot-config/ ~/.config/
