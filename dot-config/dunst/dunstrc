@@ -1,0 +1,25 @@
+[global]
+	follow = mouse
+	offset = 0x26
+	frame_width = 3
+	frame_color = "#aaaaaa"
+	font = DejaVuSansMono Nerd Font Mono 11.5
+	timeout = 3
+	alignment = center
+	markup = full
+	corner_radius = 5
+	width = (0, 500)
+	icon_path = /usr/share/icons/hicolor/scalable/apps/
+
+[urgency_low]
+	icon = /home/galib/.config/dunst/normal.png
+	script = "/home/galib/.config/dunst/normal.sh"
+
+[urgency_normal]
+	icon = /home/galib/.config/dunst/normal.png
+	script = "/home/galib/.config/dunst/normal.sh"
+
+[urgency_critical]
+	timeout = 5
+	icon = /home/galib/.config/dunst/critical.png
+    script = "/home/galib/.config/dunst/critical.sh"
