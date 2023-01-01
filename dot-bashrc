@@ -132,7 +132,7 @@ trap 'echo -n "$(tput sgr0)"' DEBUG
 #	sudo mount /dev/sda6 ~/media/sda6
 # fi
 
-export PATH="$PATH:/usr/sbin"
+export PATH="$PATH:/usr/sbin:~/.local/bin"
 export EDITOR="$(which micro)"
 export VISUAL=$EDITOR
 export GTK_IM_MODULE=ibus

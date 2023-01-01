@@ -1,0 +1,22 @@
+#! /bin/bash
+
+DIR_PATH="$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)"
+
+# making necessary directories
+mkdir -p $DIR_PATH/dot-config
+mkdir -p $DIR_PATH/dot-local-bin
+
+# copying files
+cp ~/.bashrc $DIR_PATH/dot-bashrc
+cp ~/.fehbg $DIR_PATH/dot-fehbg
+cp ~/.config/picom.conf $DIR_PATH/dot-config/
+
+cp -r \
+~/.config/bspwm ~/.config/sxhkd \
+~/.config/polybar ~/.config/dunst \
+~/.config/gsimplecal \
+$DIR_PATH/dot-config/
+
+cp -r ~/.local/bin/. $DIR_PATH/dot-local-bin/
+
+echo done.
