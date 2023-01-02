@@ -12,9 +12,12 @@ cp ~/.fehbg $DIR_PATH/dot-fehbg
 cp ~/.config/picom.conf $DIR_PATH/dot-config/
 
 cp -r \
-~/.config/bspwm ~/.config/sxhkd \
-~/.config/polybar ~/.config/dunst \
+~/.config/bspwm \
+~/.config/sxhkd \
+~/.config/polybar \
+~/.config/dunst \
 ~/.config/gsimplecal \
+~/.config/fontconfig \
 $DIR_PATH/dot-config/
 
 cp -r ~/.local/bin/. $DIR_PATH/dot-local-bin/
