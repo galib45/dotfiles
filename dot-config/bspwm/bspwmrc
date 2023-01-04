@@ -11,7 +11,7 @@ lxpolkit &
 flameshot &
 
 bspc monitor -g 1920x1080+0+0
-bspc monitor -d 1 2 3 4 5 6
+bspc monitor -d 1 2 3 4 5 6 7 8
 
 bspc config border_width         2
 bspc config window_gap           8
@@ -24,9 +24,12 @@ bspc config gapless_monocle      true
 
 bspc config pointer_follows_focus true
 
-bspc rule -a Brave-browser desktop=6 state=floating rectangle=1920x1040+0+40 follow=on focus=on border=off
+bspc query -N -n .floating | xargs -I {} bspc query -T -n {} | grep -E 'Brave-browser|Zathura' | grep -Eo '"id":[0-9]+' | awk -F: '{print $2}' | xargs -I {} bspc config -n {} border_width 0
+
+bspc rule -a Brave-browser desktop=8 state=floating rectangle=1920x1040+0+40 follow=on focus=on border=off
 bspc rule -a Brave  state=floating focus=on rectangle=800x556+0+0 center=on
-bspc rule -a Zathura desktop=5 state=floating rectangle=1920x1040+0+40 follow=on focus=on border=off
+bspc rule -a Zathura desktop=7 state=floating rectangle=1920x1040+0+40 follow=on focus=on border=off
+bspc rule -a calibre desktop=6 follow=on focus=on
 bspc rule -a Nsxiv  state=floating focus=on rectangle=800x556+0+0 center=on
-bspc rule -a Anki desktop=4 follow=on focus=on
+bspc rule -a Anki desktop=5 follow=on focus=on
 bspc rule -a Gsimplecal state=floating rectangle=316x212+1600+42
