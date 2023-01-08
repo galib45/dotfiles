@@ -101,6 +101,7 @@ alias ds='du -hd1 | sort -hr'
 alias python='python3'
 alias pip='python3 -m pip'
 alias ipa='ip -br -c a'
+alias lf='lfrun'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -140,6 +141,7 @@ export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 
 . ~/ghtoken
+. ~/.config/lf/lficons
 . "$HOME/.cargo/env"
 clear
 # pfetch
