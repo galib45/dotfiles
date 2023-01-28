@@ -1,5 +1,5 @@
 # Dotfiles Repository
-clone the repository
+first clone the repository
 
 	git clone https://github.com/galib45/dotfiles
 
