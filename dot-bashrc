@@ -136,7 +136,7 @@ trap 'echo -n "$(tput sgr0)"' DEBUG
 export PATH="$PATH:/usr/sbin:~/.local/bin"
 export EDITOR="$(which micro)"
 export VISUAL=$EDITOR
-export GTK_IM_MODULE=ibus
+export GTK_IM_MODULE=xim
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 
