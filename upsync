@@ -7,6 +7,8 @@ mkdir -p $DIR_PATH/dot-config
 mkdir -p $DIR_PATH/dot-local-bin
 
 # copying files
+cp ~/.xinitrc $DIR_PATH/dot-xinitrc
+cp ~/.Xresources $DIR_PATH/dot-Xresources
 cp ~/.bashrc $DIR_PATH/dot-bashrc
 cp ~/.fehbg $DIR_PATH/dot-fehbg
 cp ~/.config/picom.conf $DIR_PATH/dot-config/

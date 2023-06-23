@@ -1,0 +1,3 @@
+ibus-daemon -drxR
+xrdb -merge ~/.Xresources
+exec bspwm
