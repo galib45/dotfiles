@@ -9,6 +9,11 @@ cd into the directory
 
 restore dotfiles
 
-	cp dot-bashrc ~/.bashrc
-	cp dot-fehbg ~/.fehbg
-	cp -r dot-config/ ~/.config/
+	./downsync
+
+save changes to repository
+
+	./upsync
+	git add .
+	git commit -m "YOUR_COMMIT_MESSAGE"
+	git push 

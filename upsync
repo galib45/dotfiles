@@ -20,7 +20,6 @@ cp -r \
 ~/.config/dunst \
 ~/.config/gsimplecal \
 ~/.config/fontconfig \
-~/.config/lf \
 $DIR_PATH/dot-config/
 
 cp -r ~/.local/bin/. $DIR_PATH/dot-local-bin/

@@ -1,0 +1,23 @@
+#! /bin/bash
+
+DIR_PATH="$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)"
+
+# making necessary directories
+mkdir -p ~/.config/{bspwm,sxhkd,polybar,dunst,gsimplecal,fontconfig}
+mkdir -p ~/.config/.local/bin
+
+# copying files
+cp $DIR_PATH/dot-xinitrc ~/.xinitrc
+cp $DIR_PATH/dot-Xresources ~/.Xresources 
+cp $DIR_PATH/dot-bashrc ~/.bashrc 
+cp $DIR_PATH/dot-fehbg ~/.fehbg 
+cp $DIR_PATH/dot-config/picom.conf ~/.config/picom.conf 
+cp $DIR_PATH/dot-config/bspwm/* ~/.config/bspwm/
+cp $DIR_PATH/dot-config/sxhkd/* ~/.config/sxhkd/
+cp $DIR_PATH/dot-config/polybar/* ~/.config/polybar/
+cp $DIR_PATH/dot-config/dunst/* ~/.config/dunst/
+cp $DIR_PATH/dot-config/gsimplecal/* ~/.config/gsimplecal/
+cp $DIR_PATH/dot-config/fontconfig/* ~/.config/fontconfig/
+cp $DIR_PATH/dot-local-bin/* ~/.local/bin/
+
+echo done.

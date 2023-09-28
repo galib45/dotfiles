@@ -3,7 +3,7 @@
 	offset = 0x26
 	frame_width = 3
 	frame_color = "#aaaaaa"
-	font = DejaVuSansMono Nerd Font Mono 11.5
+	font = DejaVuSansM Nerd Font Mono 11.5
 	timeout = 3
 	alignment = center
 	markup = full
