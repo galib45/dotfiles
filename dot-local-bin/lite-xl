@@ -1,4 +1,0 @@
-#! /bin/bash
-
-set -xe
-~/lite-xl/lite-xl

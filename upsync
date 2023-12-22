@@ -1,5 +1,5 @@
 #! /bin/bash
-
+set -xe
 DIR_PATH="$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)"
 
 # making necessary directories
@@ -20,8 +20,7 @@ cp -r \
 ~/.config/dunst \
 ~/.config/gsimplecal \
 ~/.config/fontconfig \
+~/.config/nvim \
 $DIR_PATH/dot-config/
-
-cp -r ~/.local/bin/. $DIR_PATH/dot-local-bin/
 
 echo done.
