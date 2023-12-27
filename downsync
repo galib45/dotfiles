@@ -18,7 +18,7 @@ cp $DIR_PATH/dot-config/polybar/* ~/.config/polybar/
 cp $DIR_PATH/dot-config/dunst/* ~/.config/dunst/
 cp $DIR_PATH/dot-config/gsimplecal/* ~/.config/gsimplecal/
 cp $DIR_PATH/dot-config/fontconfig/* ~/.config/fontconfig/
-cp $DIR_PATH/dot-config/nvim/* ~/.config/nvim/
+cp -r $DIR_PATH/dot-config/nvim/* ~/.config/nvim/
 cp $DIR_PATH/dot-local-bin/* ~/.local/bin/
 
 echo done.

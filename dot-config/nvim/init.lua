@@ -3,7 +3,7 @@ vim.g.netrw_banner = 0						-- gets rid of the annoying banner for netrw
 vim.g.netrw_browse_split = 4			-- open in prior window
 vim.g.netrw_altv = 1							-- change from left splitting to right splitting
 vim.g.netrw_liststyle=3						-- tree style view in netrw
-vim.opt.title = true							-- show title
+vim.opt.title = false							-- don't show title
 vim.cmd('set path+=**')						-- search current directory recursively
 vim.opt.backup = false
 vim.opt.compatible = false				-- turn off vi compatibility mode
@@ -30,7 +30,7 @@ vim.opt.clipboard = "unnamedplus" -- Use system clipboard and sync with unnamed 
 vim.opt.termguicolors = true			-- Enable true color support
 vim.opt.splitbelow = true					-- split go below
 vim.opt.splitright = true					-- vertical split to the right
-vim.cmd('colorscheme gruvbox')		-- set colorscheme
+vim.cmd('colorscheme catppuccin')		-- set colorscheme
 vim.cmd('filetype plugin on')			-- set filetype 
 vim.cmd('set wildmenu')						-- enable wildmenu
 
@@ -45,9 +45,6 @@ end
 
 -- reload config
 configdir = "~/.config"
-if vim.fn.has("win64") or vim.fn.has("win32") then
-	configdir = "$LOCALAPPDATA"
-end
 map("n", "<leader>r", ":source "..configdir.."/nvim/init.lua<CR>")	
 
 -- normal mode keymaps
