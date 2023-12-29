@@ -52,12 +52,27 @@ map("n", "<leader>e", ":25Lex<CR>")				-- space+e toggles netrw tree view in 25%
 map("n", "<C-s>", ":w<CR>")								-- ctrl+s saves the file
 map("n", "<Tab>", "i<C-t><Esc>")					-- indent one step
 map("n", "<S-Tab>", "i<C-d><Esc>")				-- remove indent one step
-map("n", "<leader>qq", ":q!<CR>")					-- quit nvim
-map("n", "<leader>bd", ":bd!<CR>") 				-- delete current buffer 
+map("n", "<leader>qq", ":q!<CR>")					
+-- buffer keymaps
+map("n", "<leader>bd", ":bd!<CR>") 				-- delete current buffer
+map("n", "<leader>bp", ":bp<CR>") 				-- go to the previous buffer
+map("n", "<leader>bn", ":bn<CR>") 				-- go to the next buffer
+map("n", "<leader>bl", ":ls<CR>") 				-- list all buffers
+-- tab keymaps
+map("n", "<leader>tt", ":tabnext #<CR>")	-- go to the last accessed tab
+map("n", "<leader>tj", ":-tabnext<CR>")		-- go to the last accessed tab
+map("n", "<leader>tk", ":tabnext<CR>")		-- go to the last accessed tab
+map("n", "<leader>tn", ":tabnew<CR>")					-- create new tab
+
+-- window keymaps
+map("n", "<leader>w", "<C-w>p")
+map("n", "<C-h>", "<C-w><C-h>")
+map("n", "<C-j>", "<C-w><C-j>")
+map("n", "<C-k>", "<C-w><C-k>")
+map("n", "<C-l>", "<C-w><C-l>")
 
 -- insert mode keymaps
 map("i", "<C-s>", "<Esc>:w<CR>")				-- ctrl+s goes to normal mode and saves the file
-map("i", "<S-Tab>", "i<C-d><Esc>")			-- remove indent one step
 
 -- Automatically close brackets, parethesis, and quotes
 map("i", "'", "''<left>")
@@ -65,7 +80,8 @@ map("i", "\"", "\"\"<left>")
 map("i", "(", "()<left>")
 map("i", "[", "[]<left>")
 map("i", "{", "{}<left>")
-map("i", "{;", "{};<left><left>")
-map("i", "/*", "/**/<left><left>")
 
 -- Visual mode keymaps
+-- Terminal mode keymaps
+map("t", "<Esc>", "<C-\\><C-n>")
+map("t", "<leader>w", "<C-\\><C-n><C-w>p")
