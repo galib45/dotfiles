@@ -71,7 +71,6 @@ end
 
 -- install plugins
 install_plugin('tpope/vim-sleuth')
-install_plugin('numToStr/Comment.nvim')
 install_plugin('echasnovski/mini.pairs')
 install_plugin('echasnovski/mini.statusline')
 install_plugin('folke/tokyonight.nvim')
@@ -101,8 +100,14 @@ require('nvim-treesitter.configs').setup({
 require("oil").setup()
 
 -- key mappings
+-- general
 vim.keymap.set('n', '<C-s>', '<CMD>w<CR>')
 vim.keymap.set('i', '<C-s>', '<ESC><cmd>w<CR>')
-vim.keymap.set('n', '<C-r>', '<CMD>source %<CR>')
 vim.keymap.set('n', '<C-q>', '<CMD>q<CR>')
-vim.keymap.set("n", "-", "<CMD>Oil<CR>")
+vim.keymap.set('n', '<leader>cs', '<CMD>source %<CR>')
+-- oil
+vim.keymap.set('n', '-', '<CMD>Oil<CR>')
+-- buffer manipulation
+vim.keymap.set('n', '<leader>bp', '<CMD>bp<CR>')
+vim.keymap.set('n', '<leader>bn', '<CMD>bn<CR>')
+vim.keymap.set('n', '<leader>bd', '<CMD>bd<CR>')
