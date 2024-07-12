@@ -71,6 +71,7 @@ end
 
 -- install plugins
 install_plugin('tpope/vim-sleuth')
+install_plugin('numToStr/Comment.nvim')
 install_plugin('echasnovski/mini.pairs')
 install_plugin('echasnovski/mini.statusline')
 install_plugin('folke/tokyonight.nvim')
@@ -79,6 +80,9 @@ install_plugin('stevearc/oil.nvim')
 
 -- set the coloscheme
 vim.cmd('colorscheme tokyonight-night')
+
+-- setup comment
+require('Comment').setup()
 
 -- setup autopairs
 require('mini.pairs').setup()
