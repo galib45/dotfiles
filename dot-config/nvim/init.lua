@@ -38,6 +38,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- set filetype for .h files to c
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = "*.h",
+  command = "set filetype=c",
+})
+
 local function get_plugin_name(repo)
   -- Split the repository URL by '/'
   local parts = {}
