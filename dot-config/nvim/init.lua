@@ -111,6 +111,7 @@ vim.keymap.set('n', '<C-q>', '<CMD>q<CR>')
 vim.keymap.set('n', '<leader>cs', '<CMD>source %<CR>')
 -- oil
 vim.keymap.set('n', '-', '<CMD>Oil<CR>')
+vim.keymap.set('n', '<leader>n', '<CMD>Oil '..vim.fn.stdpath('config')..'<CR>')
 -- buffer manipulation
 vim.keymap.set('n', '<leader>bp', '<CMD>bp<CR>')
 vim.keymap.set('n', '<leader>bn', '<CMD>bn<CR>')
