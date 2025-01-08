@@ -80,12 +80,12 @@ install_plugin('tpope/vim-sleuth')
 install_plugin('numToStr/Comment.nvim')
 install_plugin('echasnovski/mini.pairs')
 install_plugin('echasnovski/mini.statusline')
-install_plugin('folke/tokyonight.nvim')
+install_plugin('catppuccin/nvim')
 install_plugin('nvim-treesitter/nvim-treesitter')
 install_plugin('stevearc/oil.nvim')
 
 -- set the coloscheme
-vim.cmd('colorscheme tokyonight-night')
+vim.cmd('colorscheme catppuccin-mocha')
 
 -- setup comment
 require('Comment').setup()
