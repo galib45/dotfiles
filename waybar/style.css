@@ -1,0 +1,94 @@
+@define-color base   #1e1e2e;
+@define-color mantle #181825;
+@define-color crust  #11111b;
+
+@define-color text     #cdd6f4;
+@define-color surface0 #313244;
+@define-color surface1 #45475a;
+@define-color surface2 #585b70;
+
+@define-color lavender #b4befe;
+@define-color red      #f38ba8;
+@define-color green    #a6e3a1;
+@define-color yellow   #f9e2af;
+@define-color blue     #89b4fa;
+@define-color pink     #f5c2e7;
+@define-color teal     #94e2d5;
+
+* {
+  font-family: Iosevka Nerd Font, SolaimanLipi, Noto Sans CJK, monospace;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: transparent;
+  color: white;
+}
+
+/* Modules with rounded borders */
+#wireplumber,
+#battery,
+#clock,
+#tray,
+#custom-logout {
+  font-size: 12px;
+  padding: 4px 10px;
+  margin: 4px;
+  border: 1px solid gray;
+  border-radius: 8px;
+}
+
+#custom-logout {
+  padding-right: 14px;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
+}
+
+#workspaces {
+  font-size: 12px;
+  background: transparent;
+  margin: 4px;
+  padding: 0 6px;
+  border: none;
+}
+
+#workspaces button {
+  padding: 2px;
+  color: @text;
+  background: transparent;
+  margin-right: 4px;
+  border: 1px solid @lavender;
+  border-radius: 8px;
+}
+
+#workspaces button.active {
+  background-color: @lavender;
+  color: @crust;
+  font-weight: bold;
+}
+
+#workspaces button.empty {
+  border: none;
+}
+
+#workspaces button.urgent {
+  background-color: @red;
+  color: @crust;
+  border-color: @red;
+}
+
+#workspaces button:hover {
+  background-color: rgba(137, 180, 250, 0.3);
+  color: white;
+}
+
+#window {
+  font-size: 14px;
+  font-weight: bold;
+}

@@ -1,0 +1,14 @@
+# Ignore common temporary files
+*.log
+*.cache
+*.tmp
+*.swp
+
+# Ignore directory-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*.class

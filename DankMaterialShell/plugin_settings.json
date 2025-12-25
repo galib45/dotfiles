@@ -1,0 +1,18 @@
+{
+  "dankPomodoroTimer": {
+    "enabled": true
+  },
+  "dankBatteryAlerts": {
+    "enabled": true
+  },
+  "commandRunner": {
+    "enabled": true,
+    "history": [
+      "krita",
+      "mypaint",
+      "btop"
+    ],
+    "noTrigger": true,
+    "trigger": ">"
+  }
+}

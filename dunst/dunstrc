@@ -1,0 +1,43 @@
+[global]
+frame_color = "#89b4fa"
+separator_color= frame
+highlight = "#89b4fa"
+
+[urgency_low]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[urgency_normal]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[urgency_critical]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+frame_color = "#fab387"
+
+[global]
+	follow = mouse
+	offset = (8, 8)
+	frame_width = 2
+	font = Iosevka Nerd Font 11.0
+	timeout = 2
+	alignment = center
+	markup = full
+	corner_radius = 5
+	width = (0, 500)
+	height = (0, 500)
+	icon_path = /usr/share/icons/hicolor/scalable/apps/
+
+[urgency_low]
+	icon = /home/galib/.config/dunst/normal.png
+	script = "/home/galib/.config/dunst/normal.sh"
+
+[urgency_normal]
+	icon = /home/galib/.config/dunst/normal.png
+	script = "/home/galib/.config/dunst/normal.sh"
+
+[urgency_critical]
+	timeout = 5
+	icon = /home/galib/.config/dunst/critical.png
+    script = "/home/galib/.config/dunst/critical.sh"
