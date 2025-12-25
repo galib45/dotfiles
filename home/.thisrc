@@ -1,0 +1,22 @@
+# vim:ft=bash
+
+add_to_path ~/.cargo/bin
+add_to_path ~/.local/bin
+add_to_path ~/installed
+add_to_path ~/installed/go/bin
+add_to_path ~/installed/hugo
+add_to_path ~/installed/jellyfin
+add_to_path ~/installed/uv
+add_to_path ~/installed/android-studio/bin
+add_to_path ~/installed/android-sdk/platform-tools
+add_to_path ~/installed/android-sdk/emulator
+add_to_path ~/installed/node-v22.18.0-linux-x64/bin
+add_to_path ~/installed/pnpm-global-bin
+add_to_path ~/installed/protoc-31.1-linux-x86_64/bin
+add_to_path ~/installed/weasis/bin
+add_to_path ~/installed/quickshell/bin
+
+alias fetch='rsfetch -desktup xbps'
+export LIBVIRT_DEFAULT_URI="qemu:///system"
+export PNPM_HOME="$HOME/installed/pnpm-global-bin"
+export ANDROID_AVD_HOME="$HOME/.config/.android/avd"

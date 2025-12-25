@@ -1,0 +1,9 @@
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim
+[user]
+	name = Asadul Al Galib
+	email = asadulgalibvat69@gmail.com
+[color]
+	ui = auto
