@@ -11,6 +11,7 @@ spawn-at-startup "nm-applet"
 spawn-at-startup "blueman-applet"
 spawn-at-startup "pipewire"
 spawn-at-startup "wireplumber"
+spawn-at-startup "fcitx5"
 spawn-sh-at-startup "pactl load-module module-switch-on-connect"
 spawn-sh-at-startup "wl-paste --watch cliphist store"
 
@@ -20,6 +21,11 @@ environment {
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     QT_QPA_PLATFORMTHEME "gtk3"
     QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+
+    GTK_IM_MODULE "fcitx"
+    QT_IM_MODULE "fcitx"
+    XMODIFIERS "@im=fcitx"
+    SDL_IM_MODULE "fcitx" 
 }
 
 cursor {
@@ -33,13 +39,14 @@ input {
     }
     touchpad {
         tap
+        natural-scroll
     }
     mouse {}
 }
 
 output "eDP-1" {
     mode "1920x1080@60.056"
-    scale 1.5
+    scale 1.25
     transform "normal"
     position x=1280 y=0
 }
@@ -85,6 +92,27 @@ hotkey-overlay {
     skip-at-startup
 }
 
+window-rule {
+    match app-id="steam_app_default"
+    // open-maximized true
+    // open-maximized-to-edges true
+    open-fullscreen true
+    // open-floating false
+    open-focused true
+}
+
+window-rule {
+    match app-id=r#"^jetbrains-.*$"#
+    match title=r#"^$|^\\s$|^win\\d+$"#
+    open-floating true
+    open-focused false
+}
+
+// window-rule {
+//     match title="Quarkpad"
+//     open-floating false
+// }
+
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 binds {
@@ -103,13 +131,13 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Return      hotkey-overlay-title="Open the terminal: kitty" { spawn "kitty"; }
-    Mod+B           hotkey-overlay-title="Open the browser: chromium" { spawn "chromium"; }
+    Mod+B           hotkey-overlay-title="Open the browser: chromium" { spawn-sh "flatpak run com.brave.Browser"; }
     Mod+E           hotkey-overlay-title="Open the file manager: pcmanfm" { spawn "pcmanfm-qt"; }
     Mod+W           repeat=false { close-window; }
     Mod+Shift+W     hotkey-overlay-title="Open the wallpaper drawer" { spawn-sh "dms ipc call dankdash wallpaper"; }
     Mod+Shift+Q     hotkey-overlay-title="Toggle the power menu" { spawn-sh "dms ipc call powermenu toggle"; }
     Mod+Shift+L     hotkey-overlay-title="Lock" { spawn-sh "dms ipc call lock lock"; }
-    Mod+R           hotkey-overlay-title="Run apps and others: toggle spotlight"{ spawn-sh "dms ipc call spotlight toggle"; }
+    Mod+R           hotkey-overlay-title="Run apps and others: toggle spotlight" { spawn-sh "dms ipc call spotlight toggle"; }
     Mod+Shift+B     hotkey-overlay-title="Show keybinds" { spawn-sh "dms ipc call keybinds toggle niri"; }
     Mod+V           hotkey-overlay-title="Show clipboard" { spawn-sh "dms ipc call clipboard toggle"; }
     Mod+S           hotkey-overlay-title="Toggle dms settings" { spawn-sh "dms ipc call settings toggle"; }
